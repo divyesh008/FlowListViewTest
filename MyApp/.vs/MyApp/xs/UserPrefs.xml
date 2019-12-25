@@ -1,0 +1,31 @@
+﻿<Properties StartupConfiguration="{89DA5257-2BFE-4A5E-9F54-47A1426FD5BC}|Default">
+  <MonoDevelop.Ide.ItemProperties.MyApp.Android PreferredExecutionTarget="Android.Android_Accelerated_Oreo" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="MyApp/ViewModel/HomeViewModel.cs">
+    <Files>
+      <File FileName="MyApp/Views/UserPhotos.xaml.cs" Line="1" Column="1" />
+      <File FileName="MyApp/App.xaml.cs" Line="13" Column="33" />
+      <File FileName="MyApp/ViewModel/UserPhotosViewModel.cs" Line="72" Column="23" />
+      <File FileName="MyApp/Service/Implement/Services.cs" Line="42" Column="12" />
+      <File FileName="MyApp/Service/IServices.cs" Line="13" Column="91" />
+      <File FileName="MyApp.iOS/Renderer/CellRenderer.cs" Line="17" Column="1" />
+      <File FileName="MyApp/ViewModel/BaseViewModel.cs" Line="1" Column="1" />
+      <File FileName="MyApp/ViewModel/HomeViewModel.cs" Line="63" Column="1" />
+      <File FileName="MyApp/Views/MainPage.xaml" Line="6" Column="83" />
+      <File FileName="MyApp/Views/UserPhotos.xaml" Line="1" Column="1" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="MyApp" expanded="True" />
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.ItemProperties.MyApp.iOS automaticSigning="False" PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.BDF0C57B-6F18-4818-9C9D-AE2DA448C7A1" />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>

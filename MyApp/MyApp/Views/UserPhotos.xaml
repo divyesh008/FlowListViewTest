@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:flv="clr-namespace:DLToolkit.Forms.Controls;assembly=DLToolkit.Forms.Controls.FlowListView"
+    x:Class="MyApp.UserPhotos"
+    Title="{Binding user.name}">
+
+    <ContentPage.Content>
+        <StackLayout Padding="10" Margin="5">
+            <flv:FlowListView 
+                HasUnevenRows="True"
+                FlowColumnCount="2"
+                FlowItemTappedCommand="{Binding ItemTappedCommand}"
+                SeparatorVisibility="Default"
+                FlowItemsSource="{Binding userAlbumsList}">
+
+                <flv:FlowListView.FlowColumnTemplate>
+                    <DataTemplate>
+                        <Frame x:Name="itemTemp"
+                               Margin="5"
+                               CornerRadius="5"
+                               BackgroundColor="#5d6d20"
+                               HorizontalOptions="FillAndExpand"
+                               VerticalOptions="FillAndExpand">
+                            <StackLayout Padding="0,8,0,8"
+                                         VerticalOptions="Center"
+                                         HorizontalOptions="Center">
+                                <Image Aspect="AspectFit"
+                                       HeightRequest="60"
+                                       WidthRequest="60"
+                                       Source="album.png"
+                                       HorizontalOptions="CenterAndExpand"
+                                       VerticalOptions="CenterAndExpand" />
+                                <Label Text="{Binding id}"
+                                       HorizontalOptions="CenterAndExpand"
+                                       TextColor="white"
+                                       HorizontalTextAlignment="Center"
+                                       VerticalTextAlignment="Center"></Label>
+                            </StackLayout>
+                        </Frame>
+                    </DataTemplate>
+                </flv:FlowListView.FlowColumnTemplate>
+
+            </flv:FlowListView>
+        </StackLayout>
+    </ContentPage.Content>
+
+</ContentPage>

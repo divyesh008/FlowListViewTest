@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:MyApp"
+             xmlns:ViewModels="clr-namespace:MyApp.ViewModel;assembly=MyApp"
+             xmlns:ff="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms"
+             x:Class="MyApp.MainPage"
+             Title="Users List"
+             BackgroundColor="Transparent"
+             xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
+             ios:Page.UseSafeArea="true">
+
+    <ContentPage.Content>
+        <StackLayout>
+            <Frame Padding="0"
+                   HorizontalOptions="FillAndExpand"
+                   BackgroundColor="#FBCBF3"
+                   OutlineColor="DarkGray"
+                   HasShadow="True"
+                   VerticalOptions="Center">
+                <SearchBar Margin="0"
+                           TextChanged="SearchBar_TextChanged"
+                           VerticalOptions="Center"
+                           HorizontalOptions="FillAndExpand"
+                           Placeholder="Search user...."></SearchBar>
+            </Frame>
+            <ListView x:Name="UsersListView"
+                      ItemsSource="{Binding Users}"
+                      HasUnevenRows="True"
+                      ItemSelected="Handle_ItemSelected"
+                      SeparatorVisibility="None">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell StyleId="none">
+                            <StackLayout Padding="8,6"
+                                         Orientation="Horizontal">
+                                <Frame HasShadow="True"
+                                       BackgroundColor="#fec756"
+                                       HorizontalOptions="FillAndExpand"
+                                       Padding="0,5">
+                                    <Grid Padding="2,2,2,2"
+                                          RowSpacing="0"
+                                          ColumnSpacing="10">
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition Height="AUTO" />
+                                            <RowDefinition Height="*" />
+                                            <RowDefinition Height="*" />
+                                        </Grid.RowDefinitions>
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="AUTO" />
+                                            <ColumnDefinition Width="*" />
+                                            <ColumnDefinition Width="*" />
+                                        </Grid.ColumnDefinitions>
+                                        <!--<Image Source="avatar.png" Grid.Column="0" Grid.RowSpan="3" HeightRequest="60" Aspect="AspectFill" />-->
+                                        <Label Text="{Binding name}"
+                                               Grid.Row="1"
+                                               Grid.Column="1"
+                                               FontSize="Small"
+                                               VerticalOptions="Center"
+                                               TextColor="#482f2b" />
+                                        <Label Text="{Binding company.name}"
+                                               Grid.Row="2"
+                                               Grid.Column="1"
+                                               FontSize="Micro"
+                                               VerticalOptions="Center"
+                                               TextColor="#482f2b" />
+                                        <!--<Image Source="{Binding Icon}" Grid.Row="2" Grid.Column="2" WidthRequest="30" HeightRequest="30" HorizontalOptions="End" VerticalOptions="End" />-->
+                                    </Grid>
+                                </Frame>
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackLayout>
+
+    </ContentPage.Content>
+
+</ContentPage>
